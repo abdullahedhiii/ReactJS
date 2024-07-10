@@ -1,0 +1,116 @@
+body {
+    background-color:rgb(48, 44, 44);
+    line-height: 0.2;
+}
+
+
+.header{
+    color:white;
+    display: flex;
+    justify-content: left;
+    gap:2px;
+    font-size:16px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.icon{
+    margin-top: 5px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 20px; /* Adjust the gap between items */
+    justify-content: center; /* Center items horizontally */
+    margin-top: 50px;
+    padding: 15px;
+}
+
+.artist-block {
+    color: white;
+    text-align: center; /* Center text within each artist block */
+    width: 200px; /* Set a fixed width for each block */
+}
+
+.artist-block img {
+    border-radius: 50%;
+    width: 100%; /* Ensure image fills its container */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio and cover container */
+    margin-bottom: 10px; /* Add space below each image */
+
+}
+
+
+.artist-block:hover{
+    border:1px ;
+    background-color: rgb(97, 89, 89);
+    border-radius: 10px;
+    /* padding:20px; */
+}
+
+.artist-block p{
+    padding:5px;
+    margin-left: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.name{
+    font-size: 17px;
+}
+
+.category{
+    color:gray;
+}
+
+.image-container{
+   position: relative;
+}
+
+.play {
+    background-color: rgb(70, 202, 70);
+    border: 1px solid rgb(70, 202, 70);
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px; 
+    padding: 16px;
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    visibility: hidden;
+}
+
+.play-singer{
+    position: absolute;
+    bottom: 70px;
+    right: 15px;
+    border: 5px solid rgb(48, 44, 44);
+    background-color: rgb(48, 44, 44);
+    border-radius: 5px;
+    visibility: hidden;
+    text-align: center;
+    width: 100px; /* Set a fixed width */
+    z-index: 1; /* Ensure it appears above other elements */
+    color: white; /* Text color */
+    font-family: Arial, Helvetica, sans-serif; /* Font family */
+    font-size: 15px; /* Font size */
+    line-height: 1; /* Line height */
+}
+
+
+.artist-block:hover .play{
+    visibility: visible;
+}
+
+.icon{
+    height:25px;
+}
+
+
+.artist-block:hover .play:hover + .play-singer {
+    visibility: visible; /* Show play singer on play button hover */
+}
